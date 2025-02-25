@@ -6,6 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+# Comics
+*.cbz
+*.cbr
+comics/
+
 # Distribution / packaging
 .Python
 build/
@@ -169,3 +174,15 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Devenv
+*envrc*
+*devenv*
+devenv.lock
+devenv.local.nix
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
