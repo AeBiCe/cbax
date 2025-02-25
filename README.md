@@ -1,4 +1,4 @@
-# Comic Book Archive explorer
+# Comic Book Archive eXplorer
 This is small application to read comic book files (.cbz for a start) and provide a nice and simple UI to enjoy them.
 
 # Background
