@@ -8,14 +8,17 @@
   packages = [ pkgs.git ];
 
   # https://devenv.sh/languages/
-  
-  # https://devenv.sh/languages/
   languages.python = {
-     enable = true;
-     venv.enable = true;
-     venv.requirements = ''
-       fastapi[standard] 
-     '';
+    enable = true;
+    venv.enable = true;
+    venv.requirements = ''
+      fastapi[standard] 
+    '';
+  };
+  languages.javascript = {
+    enable = true;
+    package = pkgs.nodejs_22;
+    yarn.enable = true; # Supposedly a good npm alternative
   };
 
   # https://devenv.sh/processes/
@@ -34,12 +37,6 @@
     git --version
   '';
 
-  # https://devenv.sh/tasks/
-  # tasks = {
-  #   "myproj:setup".exec = "mytool build";
-  #   "devenv:enterShell".after = [ "myproj:setup" ];
-  # };
-
   # https://devenv.sh/tests/
   enterTest = ''
     echo "Running tests"
@@ -48,6 +45,4 @@
 
   # https://devenv.sh/git-hooks/
   # git-hooks.hooks.shellcheck.enable = true;
-
-  # See full reference at https://devenv.sh/reference/options/
 }
