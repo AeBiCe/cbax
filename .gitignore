@@ -11,6 +11,9 @@ __pycache__/
 *.cbr
 comics/
 
+# NodeJS
+node_modules/
+
 # Distribution / packaging
 .Python
 build/
